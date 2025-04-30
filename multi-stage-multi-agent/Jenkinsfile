@@ -3,10 +3,10 @@ pipeline {
   stages {
     stage('Back-end') {
       agent {
-        docker { image '3.9.9-eclipse-temurin-11' }
+        docker { image 'maven:3.9.9-eclipse-temurin-11' }
       }
       steps {
-        sh 'maven --version'
+        sh 'mvn --version'
       }
     }
     stage('Front-end') {
